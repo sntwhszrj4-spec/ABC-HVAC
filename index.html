@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABC HVAC | Heating & Cooling</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #1677ff;
+    }
+
+    .header-button {
+      background: #1677ff;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 110px 7%;
+      background: linear-gradient(135deg, #f3f8ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #1677ff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 7vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #5d6675;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .primary-button {
+      display: inline-block;
+      background: #1677ff;
+      color: white;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #697386;
+    }
+
+    .service-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      padding: 35px;
+      border: 1px solid #e5e8ed;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .service-card .icon {
+      font-size: 35px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #697386;
+    }
+
+    /* WHY US */
+    .why-us {
+      padding: 90px 7%;
+      background: #f6f8fb;
+    }
+
+    .why-grid {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why-item {
+      padding: 25px;
+    }
+
+    .why-item h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .why-item p {
+      color: #697386;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 90px 7%;
+      text-align: center;
+      background: #1677ff;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 43px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 28px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #1677ff;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 7%;
+      text-align: center;
+      color: #7b8492;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .service-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 18px 5%;
+      }
+
+      .hero {
+        padding: 80px 5%;
+      }
+
+      .services,
+      .why-us,
+      .cta {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .header-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      ABC <span>HVAC</span>
+    </div>
+
+    <a href="#service" class="header-button">
+      Request Service
+    </a>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Heating & Cooling
+      </div>
+
+      <h1>
+        Fast, Reliable HVAC Service
+      </h1>
+
+      <p>
+        Professional heating and cooling service you can count on.
+        Get help with AC repairs, heating, installation, maintenance,
+        and emergency HVAC service.
+      </p>
+
+      <a href="#service" class="primary-button">
+        Request Service
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services">
+
+    <div class="section-title">
+      <h2>Our HVAC Services</h2>
+      <p>Keeping your home comfortable year-round.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="icon">❄️</div>
+        <h3>AC Repair</h3>
+        <p>
+          Fast, dependable repairs to get your cooling system
+          back up and running.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>AC Installation</h3>
+        <p>
+          Professional installation and replacement for
+          reliable home comfort.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🔧</div>
+        <h3>HVAC Maintenance</h3>
+        <p>
+          Preventative maintenance to help keep your heating
+          and cooling system running efficiently.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+
+    <div class="section-title">
+      <h2>Why Choose ABC HVAC?</h2>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <h3>24/7 Assistance</h3>
+        <p>
+          Get answers and request service anytime through
+          our virtual receptionist.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Professional Service</h3>
+        <p>
+          Quality heating and cooling solutions for your home.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Easy Service Requests</h3>
+        <p>
+          Tell us what's wrong and we'll collect the information
+          needed to get your request started.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="cta" id="service">
+
+    <h2>Need HVAC Service?</h2>
+
+    <p>
+      Our virtual receptionist is available 24/7 to answer
+      questions and collect service requests.
+    </p>
+
+    <a href="#top" class="cta-button">
+      Chat With ABC HVAC
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 ABC HVAC — Demo Website
+  </footer>
+
+
+  <!-- =====================================================
+       BOTPRESS AI CHAT
+       ===================================================== -->
+
+  <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+
+  <script
+    src="https://files.bpcontent.cloud/2026/08/13/17/20260813171934-O0L82H8C.js"
+    defer>
+  </script>
+
+</body>
+</html>
